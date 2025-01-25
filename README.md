@@ -5,7 +5,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)
 [![Open Source](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/prajjwaltiwarii/THREAT-INTELLIGENCE-EXTRACTION-TOOL)
 
-<img src="https://github.com/prajjwaltiwarii/THREAT-INTELLIGENCE-EXTRACTION-TOOL/assets/placeholder-image.jpg" width="800" alt="Tool Demo">
 
 
 ## 🎯 Features
