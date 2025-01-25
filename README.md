@@ -24,8 +24,8 @@ REQUIREMENTS
 QUICK SETUP
 -----------
 1. Get the code:
-   git clone https://github.com/prajjwaltiwarii/PS-1.git
-   cd PS-1
+   git clone https://github.com/prajjwaltiwarii/THREAT-INTELLIGENCE-EXTRACTION-TOOL.git
+   cd THREAT-INTELLIGENCE-EXTRACTION-TOOL
 
 2. Install requirements:
    pip install -r requirements.txt
