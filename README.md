@@ -7,14 +7,6 @@
 
 <img src="https://github.com/prajjwaltiwarii/THREAT-INTELLIGENCE-EXTRACTION-TOOL/assets/placeholder-image.jpg" width="800" alt="Tool Demo">
 
-## 📖 Table of Contents
-- [Features](#-features)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Output Format](#-output-format)
-- [Repo Structure](#-repository-structure)
-- [Support](#-support)
-- [License](#-license)
 
 ## 🎯 Features
 - **PDF Analysis**: Extract text from multi-page threat reports
