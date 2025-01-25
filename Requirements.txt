@@ -1,0 +1,10 @@
+# Threat Intelligence Extractor Requirements
+# Python 3.8+ compatible
+
+spacy==3.7.2           # NLP entity recognition
+pdfplumber==0.10.3     # PDF text extraction
+vt-py==0.18.2          # VirusTotal API client
+requests==2.31.0       # HTTP library (required by vt-py)
+
+# spaCy English language model (required after installation)
+# Run: python -m spacy download en_core_web_sm
