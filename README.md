@@ -29,8 +29,9 @@
 - Python 3.8+
 - VirusTotal API Key (Optional)
 
-### Quick Start
-```bash
+Quick Start
+
+bash
 # Clone repository
 git clone https://github.com/prajjwaltiwarii/THREAT-INTELLIGENCE-EXTRACTION-TOOL.git
 cd THREAT-INTELLIGENCE-EXTRACTION-TOOL
@@ -38,12 +39,12 @@ cd THREAT-INTELLIGENCE-EXTRACTION-TOOL
 # Install dependencies
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm 
-
  
 ## 🖥️ Usage
 
 ### Basic Command
-```bash
+
+bash
 python script.py.py -i <input.pdf>
 
 Full Analysis with VirusTotal
@@ -65,7 +66,8 @@ python script.py -i <input.pdf> -f <field1> <field2>...
 **Default Behavior**: All fields included if none specified
 
 ### Example Combinations
-```bash
+
+bash
 # Get only IoCs and Malware data
 python script.py -i report.pdf -f iocs malware
 
