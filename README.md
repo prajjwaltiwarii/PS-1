@@ -24,11 +24,13 @@ git clone https://github.com/prajjwaltiwarii/THREAT-INTELLIGENCE-EXTRACTION-TOOL
 cd THREAT-INTELLIGENCE-EXTRACTION-TOOL
 
 # Install dependencies
-pip install -r requirements.txt
+pip install -r Requirements.txt
 python -m spacy download en_core_web_sm
 ```
+- First You Have To Create a Virtual Enviorment (in python) to install all these dependencies 
 
 ## USAGE
+
  Basic Extraction
  ``` python script.py -i report.pdf```
 
