@@ -27,8 +27,23 @@ cd THREAT-INTELLIGENCE-EXTRACTION-TOOL
 pip install -r Requirements.txt
 python -m spacy download en_core_web_sm
 ```
-- First You Have To Create a Virtual Enviorment (in python) to install all these dependencies 
+```For Windows
 
+    Update Locale Settings (Windows):
+
+        Go to Control Panel > Region > Administrative > Change system locale
+
+        Check Beta: Use Unicode UTF-8 for worldwide language support
+
+        Reboot your system.
+or
+
+    Use Linux/WSL:
+    Linux handles Unicode better. Consider using Windows Subsystem for Linux (WSL).
+```
+```For Linux
+- First You Have To Create a Virtual Enviorment in python to install all these dependencies 
+```
 ## USAGE
 
  Basic Extraction
