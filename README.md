@@ -30,21 +30,21 @@ python -m spacy download en_core_web_sm
 
 ## USAGE
  Basic Extraction
- - python script.py -i report.pdf
+ ``` python script.py -i report.pdf```
 
  Full Analysis (with VirusTotal)
- - python script.py -i report.pdf -k YOUR_VT_API_KEY
+``` python script.py -i report.pdf -k YOUR_VT_API_KEY```
 
  Custom Output Fields
- - Get only IoCs and TTPs python
- - script.py -i report.pdf -f iocs ttps
+ ``` Get only IoCs and TTPs python```
+ ``` script.py -i report.pdf -f iocs ttps ```
 
-- Available Fields:
- - iocs = Indicators of Compromise
- - ttps = MITRE TTPs
- - threat_actors = Threat Actors
- - malware = Malware Details
- - targeted_entities = Targeted Organizations 
+ Available Fields:
+ ``` iocs = Indicators of Compromise ```
+ ``` ttps = MITRE TTPs ```
+ ``` threat_actors = Threat Actors```
+ ``` malware = Malware Details```
+ ``` targeted_entities = Targeted Organizations``` 
 
 ## 📄 Sample Output
 
