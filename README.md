@@ -1,122 +1,84 @@
 # 🛡️ Threat Intelligence Extraction Tool
-*Automated Cybersecurity Report Analysis with MITRE ATT&CK Mapping and VirusTotal Integration*
+
+*Automated PDF Analysis with MITRE ATT&CK Mapping & VirusTotal Integration*
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)
-[![Open Source](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/prajjwaltiwarii/THREAT-INTELLIGENCE-EXTRACTION-TOOL)
-
 
 
 ## 🎯 Features
-- **PDF Analysis**: Extract text from multi-page threat reports
-- **IoC Detection**: 
-  - IP Addresses (`192.168.1.1`) 
-  - Domains (`evil.com`)
-  - File Hashes (MD5/SHA1/SHA256)
-  - Email Addresses
-- **Threat Intelligence**:
+- **PDF Text Extraction**: Multi-page report processing
+- **IoC Detection**: IPs, Domains, Hashes, Emails
+- **Threat Analysis**: 
   - MITRE ATT&CK TTP Mapping
   - Threat Actor Identification
   - Targeted Industry Detection
-- **Malware Analysis** (with VirusTotal API):
-  - Hash Reputation Lookup
-  - Detection Statistics
-  - File Metadata
+- **Malware Analysis**: VirusTotal integration
+- **Custom Outputs**: Select specific data fields
 
 ## 💻 Installation
 
-### Prerequisites
-- Python 3.8+
-- VirusTotal API Key (Optional)
-
-Quick Start
-
-bash
+```bash
 # Clone repository
 git clone https://github.com/prajjwaltiwarii/THREAT-INTELLIGENCE-EXTRACTION-TOOL.git
 cd THREAT-INTELLIGENCE-EXTRACTION-TOOL
 
 # Install dependencies
 pip install -r requirements.txt
-python -m spacy download en_core_web_sm 
- 
-## 🖥️ Usage
+python -m spacy download en_core_web_sm
+```
 
-### Basic Command
+## USAGE
+ Basic Extraction
+ - python script.py -i report.pdf
 
-bash
-python script.py.py -i <input.pdf>
+ Full Analysis (with VirusTotal)
+ - python script.py -i report.pdf -k YOUR_VT_API_KEY
 
-Full Analysis with VirusTotal
-python script.py.py -i <input.pdf> -k <API_KEY>
+ Custom Output Fields
+ - Get only IoCs and TTPs python
+ - script.py -i report.pdf -f iocs ttps
 
-Custom Output Fields
-python script.py -i <input.pdf> -f <field1> <field2>...
-## 🔧 Custom Output Options
+- Available Fields:
+ - iocs = Indicators of Compromise
+ - ttps = MITRE TTPs
+ - threat_actors = Threat Actors
+ - malware = Malware Details
+ - targeted_entities = Targeted Organizations 
 
-### Available Fields
-| CLI Option          | Description                          | JSON Key               |
-|---------------------|--------------------------------------|------------------------|
-| `iocs`              | Indicators of Compromise             | `IoCs`                 |
-| `ttps`              | MITRE ATT&CK Tactics & Techniques    | `TTPs`                 |
-| `threat_actors`     | Threat Actor Groups/Individuals      | `Threat Actor(s)`      |
-| `malware`           | Malware Details & Hashes             | `Malware`              |
-| `targeted_entities` | Targeted Industries/Organizations    | `Targeted Entities`    |
+## 📄 Sample Output
 
-**Default Behavior**: All fields included if none specified
-
-### Example Combinations
-
-bash
-# Get only IoCs and Malware data
-python script.py -i report.pdf -f iocs malware
-
-# Focus on attack patterns
-python script.py -i report.pdf -f ttps targeted_entities
-
-# Minimal output (just actors and targets)
-python script.py -i report.pdf -f threat_actors targeted_entities
-
-Output:
-usage: threat_intel_extractor.py [-h] -i INPUT [-k K] [-f [F ...]]
-
-Extract threat intelligence from PDF reports
-
-options:
-  -i                    INPUT, Input PDF file path (required)
-  -k                    VirusTotal API key (optional)
-  -f                    Output fields: iocs|ttps|threat_actors|malware|targeted_entities
-
-📄 Sample Output
-
-{
+```{
   "IoCs": {
-    "IP_addresses": ["192.168.1.105"],
-    "Domains": ["evil-domain.net"],
-    "Hashes": ["a1b2c3d4e5f6..."],
-    "Emails": ["phish@evil-domain.net"]
+    "IP_addresses": ["192.168.1.1"],
+    "Domains": ["evil.com"],
+    "Hashes": ["a1b2c3d4..."],
+    "Emails": ["phish@evil.com"]
   },
   "TTPs": {
     "Tactics": [{"TA0001": "Initial Access"}],
     "Techniques": [{"T1566.001": "Spearphishing Attachment"}]
   },
-  "Threat_Actor(s)": ["APT29"],
+  "Threat Actor(s)": ["APT29"],
   "Malware": [
     {
       "Name": "Shamoon",
-      "md5": "a1b2c3d4...",
+      "md5": "a1b2c3...",
       "sha256": "d4e5f6...",
-      "tags": ["wiper", "destructive"]
+      "tags": ["wiper"]
     }
   ],
-  "Targeted_Entities": ["Energy Sector"]
+  "Targeted Entities": ["Energy Sector"]
 }
 
-📂 Repository Structure
+```
+## 🛠️ Troubleshooting
 
-THREAT-INTELLIGENCE-EXTRACTION-TOOL/
-├── script.py  # Main script
-├── requirements.txt           # Dependency list
-├── sample_report.pdf          # Example input
-├── output.json                # Sample output
-└── README.md                  # This document
+```
+    Missing spaCy Model:
+    python -m spacy download en_core_web_sm
+
+    PDF Extraction Issues: Use simpler PDF layouts
+
+    VirusTotal Errors: Check API quota here
+```
