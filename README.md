@@ -43,7 +43,7 @@ or
     Linux handles Unicode better. Consider using Windows Subsystem for Linux (WSL).
 ```
 ```
-# For Linux
+# For Linux/Mac
 - First You Have To Create a Virtual Enviorment in python to install all these dependencies 
 ```
 ## USAGE
